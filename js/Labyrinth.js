@@ -192,7 +192,7 @@ class Labyrinth {
                 ctx.fillStyle = "white";
                 ctx.font = "30px serif";
                 ctx.fillText("Press ENTER to reset", 330, startHeight + 50);
-                ctx.fillText(`Game time: ${ this.msToHMS(new Date().getTime() - this.timer.getTime()) }`, 330, startHeight + 100);
+                ctx.fillText(`Play time: ${ this.msToHMS(new Date().getTime() - this.timer.getTime()) }`, 330, startHeight + 100);
                 ctx.fillText(`Deaths: ${ this.deathCount}`, 330, startHeight + 140);
             }     
             startHeight--;
@@ -209,7 +209,7 @@ class Labyrinth {
         var minutes = parseInt( seconds / 60 ); // 60 seconds in 1 minute
         // 4- Keep only seconds not extracted to minutes:
         seconds = seconds % 60;
-        return hours+":"+minutes+":"+seconds.toFixed(0);
+        return hours+"h:"+minutes+"m:"+seconds.toFixed(0)+"s";
     }
 
 }
