@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Labyrinth</title>
+</head>
+
+<body class="bg-dark">
+    <!-- audio  -->
+    <audio class="audio" id="titleAudio" controls>
+        <source src="sounds/titleAudio.wav" type="audio/wav">
+    </audio>
+    <audio class="audio" id="inGameAudio" controls loop>
+        <source src="sounds/inGameAudio.wav" type="audio/wav">
+    </audio>
+    <audio class="audio" id="portalWarp" controls>
+        <source src="sounds/portalWarp.wav" type="audio/wav">
+    </audio>
+    <audio class="audio" id="doorSound" controls>
+        <source src="sounds/doorSound.wav" type="audio/wav">
+    </audio>
+    <audio class="audio" id="doomDeathSound" controls>
+        <source src="sounds/doomDeathSound.mp3" type="audio/mp3">
+    </audio>
+    <audio class="audio" id="winAudio" controls>
+        <source src="sounds/winAudio.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- ghost -->
+    <img class="ghost" id="frame_0" src="images/frame_0.gif" alt="ghost">
+    <img class="ghost" id="frame_1" src="images/frame_1.gif" alt="ghost">
+    <img class="ghost" id="frame_2" src="images/frame_2.gif" alt="ghost">
+    <img class="ghost" id="frame_3" src="images/frame_3.gif" alt="ghost">
+    <img class="ghost" id="frame_4" src="images/frame_4.gif" alt="ghost">
+    <img class="ghost" id="frame_5" src="images/frame_5.gif" alt="ghost">
+
+    <!-- portal -->
+    <div id="portal">
+    </div>
+
+    <!-- minotaur -->
+    <div id="minotaur">
+    </div>
+
+    <!-- werewolf -->
+    <div id="werewolf">
+    </div>
+
+    <!-- skeleton -->
+    <div id="skeleton">
+    </div>
+
+    <!-- wraith -->
+    <div id="wraith">
+    </div>
+
+    <!-- cyborg -->
+    <div id="cyborg">
+    </div>
+
+    <!-- angryBread -->
+    <div id="angryBread">
+    </div>
+
+    <!-- dragon -->
+    <div id="dragon">
+    </div>
+
+    <!-- map -->
+    <img width="500" class="map" src="images/map/map.jpg" alt="map">
+
+    <div class="container">
+        <div class="row">
+            <canvas class="col bg-light mt-4 border border-dark p-0" id="game" width="1000" height="600">
+            </canvas>
+        </div>
+    </div>
+    <script src="js/animationFrames.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/Room.js"></script>
+    <script src="js/Labyrinth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+.ghost,
+.portal,
+.audio,
+.minotaur,
+.werewolf,
+.skeleton,
+.wraith,
+.cyborg,
+.angryBread,
+.dragon,
+.map,
+#reload {
+    visibility: hidden;
+    position: absolute;
+}
+
+.map-default {
+    position: absolute;
+    z-index: 999;
+    top: 6.8vh;
+    right: 12.6vw;
+}
