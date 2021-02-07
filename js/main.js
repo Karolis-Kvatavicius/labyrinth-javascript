@@ -3,23 +3,20 @@ function getFrames() {
     animationFrames.forEach(enemy => {
         let name = Object.keys(enemy)[0];
         enemy[name].forEach(frame => {
-            document.querySelector('body').innerHTML += "<img class='" + name + "' src='" + "images/"+ name + '/' + frame + "'>";
+            document.querySelector('body').innerHTML += "<img class='" + name + "' src='" + "images/" + name + '/' + frame + "'>";
         });
     });
 }
 
-// In game map
-let map = document.querySelector(".map");
-
-document.addEventListener('keyup', e => {
-    if (e.key == "m") {
-        map.classList.toggle("map");
-        map.classList.toggle("map-default");
-    }
-});
-
 window.onload = () => {
-    
+    // In game map
+    document.addEventListener('keyup', e => {
+        if (e.key == "m") {
+            document.querySelector("#gameMap").classList.toggle("map");
+            document.querySelector("#gameMap").classList.toggle("map-default");
+        }
+    });
+
     // ACTUAL LOADING OF FRAMES
     getFrames();
 
