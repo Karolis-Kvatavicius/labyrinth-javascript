@@ -20,6 +20,7 @@ window.onload = () => {
     // ACTUAL LOADING OF FRAMES
     getFrames();
 
+    // controls message, also used to force user interraction with page so that audio wouldn't be muted
     let context = document.querySelector('#game').getContext('2d');
     context.font = "20px serif";
     context.fillText('W, A, S, D - to navigate. ENTER - to reset at dead ends. Click anywhere to start', 200, 300);

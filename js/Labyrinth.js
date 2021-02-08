@@ -142,7 +142,7 @@ class Labyrinth {
                     ctx.font = "30px serif";
                     ctx.fillText("Press ENTER to play", 360, startHeight + 50);
                     ctx.font = "15px serif";
-                    ctx.fillText("Created by Karolis Kvatavičius, vtmc.lt", 750, 580);
+                    ctx.fillText("Created by Karolis Kvatavičius, www.vtmc.lt", 710, 580);
 
                     this.entergame = document.addEventListener('keyup', e => {
                         if (e.key == "Enter" && this.currentRoom == "") {
@@ -173,7 +173,7 @@ class Labyrinth {
         this.inGameAudio.currentTime = 0;
         this.winAudio.play();
         this.winScreenInterval = setInterval(() => {
-            if (startHeight == 300) {
+            if (startHeight == 250) {
                 clearInterval(this.winScreenInterval);
                 document.addEventListener('keyup', e => {
                     if (e.key == "Enter" && this.currentRoom == "escape") {
@@ -185,15 +185,15 @@ class Labyrinth {
             ctx.fillRect(0, 0, 1000, 600);
             ctx.font = "70px serif";
             ctx.fillStyle = "grey";
-            ctx.fillText("YOU WIN", 305, startHeight + 3);
+            ctx.fillText("YOU WIN", 355, startHeight + 3);
             ctx.fillStyle = "green";
-            ctx.fillText("YOU WIN", 300, startHeight);
-            if(startHeight ==  300) {
+            ctx.fillText("YOU WIN", 350, startHeight);
+            if(startHeight ==  250) {
                 ctx.fillStyle = "white";
                 ctx.font = "30px serif";
-                ctx.fillText("Press ENTER to reset", 330, startHeight + 50);
-                ctx.fillText(`Play time: ${ this.msToHMS(new Date().getTime() - this.timer.getTime()) }`, 330, startHeight + 100);
-                ctx.fillText(`Deaths: ${ this.deathCount}`, 330, startHeight + 140);
+                ctx.fillText("Press ENTER to reset", 380, startHeight + 50);
+                ctx.fillText(`Play time: ${ this.msToHMS(new Date().getTime() - this.timer.getTime()) }`, 380, startHeight + 100);
+                ctx.fillText(`Deaths: ${ this.deathCount}`, 380, startHeight + 140);
             }     
             startHeight--;
         }, 10);

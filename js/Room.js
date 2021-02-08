@@ -50,7 +50,7 @@ class Room {
         this.ctx.fill();
 
         if (id == "a1") {
-            this.ctx.strokeText("YOU FOUND YOURSELF IN THIS EMPTY ROOM, TRY TO FIND A WAY OUT", 200, 580);
+            this.ctx.strokeText("YOU FOUND YOURSELF IN THIS EMPTY ROOM, TRY TO FIND A WAY OUT", 170, 580);
         }
 
         if (id == "d1") {
@@ -215,8 +215,8 @@ class Room {
             setTimeout(() => {
                 canvasBack.ctx.fillStyle = "red";
                 canvasBack.ctx.font = "30px serif";
-                canvasBack.ctx.fillText("YOU DIED. PRESS ENTER TO CONTINUE", 300, 580);
-                canvasBack.ctx.strokeText("YOU DIED. PRESS ENTER TO CONTINUE", 300, 580);
+                canvasBack.ctx.fillText("YOU DIED. PRESS ENTER TO CONTINUE", 220, 580);
+                canvasBack.ctx.strokeText("YOU DIED. PRESS ENTER TO CONTINUE", 220, 580);
             }, 1050);
             this.ctx.drawImage(canvasBack, 0, 0);
             this.ctx.drawImage(enemy[count], 350, 150, size, size);
