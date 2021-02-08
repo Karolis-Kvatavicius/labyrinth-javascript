@@ -19,7 +19,7 @@ class Labyrinth {
     gameControls() {
 
         this.controls = document.addEventListener('keypress', e => {
-
+            // setTimeout(() => {
             if (this.currentRoom.id == "A1") {
                 if (e.key == "d") {
                     clearInterval(this.currentRoom.arrowsInterval);
@@ -123,7 +123,8 @@ class Labyrinth {
 
             //portal room
             else if (this.currentRoom.id == "D1") {
-                if (e.key == "w") {
+                if (e.key == "w" && this.currentRoom.portalWarpAnimation != "started") {
+                    this.currentRoom.portalWarpAnimation = "started";
                     this.portalWarp.play();
                     setTimeout(() => {
                         clearInterval(this.currentRoom.portalAnimation);
@@ -138,20 +139,18 @@ class Labyrinth {
                     clearInterval(this.currentRoom.arrowsInterval);
                     this.winAnimation();
                 }
-
             }
 
             // dead ends
             else if (this.deadEnds.includes(this.currentRoom.id)) {
-                setTimeout(() => {
-                    if (e.key == "Enter") {
+                    if (e.key == "Enter" && this.currentRoom.enemyAnimation == "finished") {
                         clearInterval(this.currentRoom.ghostAnimation);
                         this.deathCount++;
                         this.currentRoom = new Room('a1');
                     }
-                }, 1500);
             }
-        });
+        }, 100);
+        // });
     }
 
     titleScreen() {

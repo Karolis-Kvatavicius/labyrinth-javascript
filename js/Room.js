@@ -19,6 +19,8 @@ class Room {
     ghostAnimation;
     doorSound = document.querySelector("#doorSound");
     deathSound = document.querySelector("#doomDeathSound");
+    enemyAnimation;
+    portalWarpAnimation;
 
     // room types by id
     right = ['e1', 'e2', 'a4', 'd3'];
@@ -232,6 +234,9 @@ class Room {
             this.ctx.drawImage(enemy[count], 350, 150, size, size);
             count++;
         }, frameInterval);
+        setTimeout(() => {
+            this.enemyAnimation = "finished";
+        }, 2500);
     }
 
     portal() {

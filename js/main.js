@@ -23,7 +23,7 @@ window.onload = () => {
     // controls message, also used to force user interraction with page so that audio wouldn't be muted
     let context = document.querySelector('#game').getContext('2d');
     context.font = "20px serif";
-    context.fillText('W, A, S, D - to navigate. ENTER - to reset at dead ends. Click anywhere to start', 200, 300);
+    context.fillText('W, A, D - to navigate. ENTER - to reset at dead ends. Click anywhere to start', 200, 300);
 
     document.addEventListener('click', e => {
         // LET THE GAME START AND ENABLE CONTROLS
@@ -32,6 +32,6 @@ window.onload = () => {
         labyrinth.gameControls();
     }, {
         once: true
-    })
+    });
 
 }
