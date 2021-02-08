@@ -135,6 +135,7 @@ class Labyrinth {
             //win room
             else if (this.currentRoom.id == "A5") {
                 if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.winAnimation();
                 }
 

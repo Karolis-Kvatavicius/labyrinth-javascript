@@ -133,6 +133,7 @@ class Room {
         } else if (id == 'a5') {
             // win room
             this.backDoor("white");
+            this.arrows(false, true, false);
         } else if (id == "b1") {
             this.enemy();
             setTimeout(() => {
