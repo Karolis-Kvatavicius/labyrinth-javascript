@@ -11,7 +11,10 @@ class Room {
     cyborg = document.querySelectorAll(".cyborg");
     angryBread = document.querySelectorAll(".angryBread");
     dragon = document.querySelectorAll(".dragon");
-
+    upArrow = document.querySelectorAll(".up");
+    leftArrow = document.querySelectorAll(".left");
+    rightArrow = document.querySelectorAll(".right");
+    arrowsInterval;
     portalFrames = document.querySelectorAll(".portal");
     ghostAnimation;
     doorSound = document.querySelector("#doorSound");
@@ -103,21 +106,27 @@ class Room {
         // draw doors
         if (this.right.includes(id)) {
             this.rightDoor();
+            this.arrows(false, false, true);
         } else if (this.rightLeft.includes(id)) {
             this.leftDoor();
             this.rightDoor();
+            this.arrows(true, false, true);
         } else if (this.up.includes(id)) {
             this.backDoor();
+            this.arrows(false, true, false);
         } else if (this.upLeft.includes(id)) {
             this.backDoor();
             this.leftDoor();
+            this.arrows(true, true, false);
         } else if (this.upRight.includes(id)) {
             this.backDoor();
             this.rightDoor();
+            this.arrows(false, true, true);
         } else if (this.upRightLeft.includes(id)) {
             this.backDoor();
             this.rightDoor();
             this.leftDoor();
+            this.arrows(true, true, true);
             // portal room
         } else if (id == 'd1') {
             this.portal();
@@ -240,5 +249,32 @@ class Room {
             this.ctx.drawImage(this.portalFrames[count], 350, 150, 200, 200);
             count++;
         }, 50);
+    }
+
+    arrows(left=false, up=false, right=false) {
+        let canvasBack = document.createElement("canvas");
+        canvasBack.width = 1000;
+        canvasBack.height = 600;
+        canvasBack.ctx = canvasBack.getContext("2d");
+        canvasBack.ctx.drawImage(this.canvas, 0, 0);
+        let count = 0;
+        this.arrowsInterval = setInterval((leftA = left, upA = up, rightA = right) => {
+            if (count == this.leftArrow.length) {
+                count = 0;
+            }
+            this.ctx.clearRect(0, 0, 1000, 600);
+            this.ctx.drawImage(canvasBack, 0, 0);
+            if(leftA) {
+                this.ctx.drawImage(this.leftArrow[count], 280, 340, 50, 50);
+            }
+            if(rightA) {
+                this.ctx.drawImage(this.rightArrow[count], 680, 340, 50, 50);
+            }
+            if(upA) {
+                this.ctx.drawImage(this.upArrow[count], 490, 245, 50, 50);
+            }
+            count++;
+        }, 50);
+
     }
 }

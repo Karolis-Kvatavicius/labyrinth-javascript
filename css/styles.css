@@ -9,6 +9,9 @@
 .angryBread,
 .dragon,
 .map,
+.left,
+.right,
+.up,
 #reload {
     visibility: hidden;
     position: absolute;

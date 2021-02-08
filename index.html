@@ -12,22 +12,22 @@
 
 <body class="bg-dark">
     <!-- audio  -->
-    <audio class="audio" id="titleAudio" controls>
+    <audio class="audio height" id="titleAudio" controls>
         <source src="sounds/titleAudio.wav" type="audio/wav">
     </audio>
-    <audio class="audio" id="inGameAudio" controls loop>
+    <audio class="audio height" id="inGameAudio" controls loop>
         <source src="sounds/inGameAudio.wav" type="audio/wav">
     </audio>
-    <audio class="audio" id="portalWarp" controls>
+    <audio class="audio height" id="portalWarp" controls>
         <source src="sounds/portalWarp.wav" type="audio/wav">
     </audio>
-    <audio class="audio" id="doorSound" controls>
+    <audio class="audio height" id="doorSound" controls>
         <source src="sounds/doorSound.wav" type="audio/wav">
     </audio>
-    <audio class="audio" id="doomDeathSound" controls>
+    <audio class="audio height" id="doomDeathSound" controls>
         <source src="sounds/doomDeathSound.mp3" type="audio/mp3">
     </audio>
-    <audio class="audio" id="winAudio" controls>
+    <audio class="audio height" id="winAudio" controls>
         <source src="sounds/winAudio.mp3" type="audio/mp3">
     </audio>
 
@@ -35,15 +35,27 @@
     <img id="gameMap" width="500" class="map" src="images/map/map.jpg" alt="map">
 
     <!-- ghost -->
-    <img class="ghost" id="frame_0" src="images/frame_0.gif" alt="ghost">
-    <img class="ghost" id="frame_1" src="images/frame_1.gif" alt="ghost">
-    <img class="ghost" id="frame_2" src="images/frame_2.gif" alt="ghost">
-    <img class="ghost" id="frame_3" src="images/frame_3.gif" alt="ghost">
-    <img class="ghost" id="frame_4" src="images/frame_4.gif" alt="ghost">
-    <img class="ghost" id="frame_5" src="images/frame_5.gif" alt="ghost">
+    <img class="ghost height" id="frame_0" src="images/frame_0.gif" alt="ghost">
+    <img class="ghost height" id="frame_1" src="images/frame_1.gif" alt="ghost">
+    <img class="ghost height" id="frame_2" src="images/frame_2.gif" alt="ghost">
+    <img class="ghost height" id="frame_3" src="images/frame_3.gif" alt="ghost">
+    <img class="ghost height" id="frame_4" src="images/frame_4.gif" alt="ghost">
+    <img class="ghost height" id="frame_5" src="images/frame_5.gif" alt="ghost">
 
     <!-- portal -->
     <div id="portal">
+    </div>
+
+    <!-- left -->
+    <div id="left">
+    </div>
+
+    <!-- right -->
+    <div id="right">
+    </div>
+
+    <!-- up -->
+    <div id="up">
     </div>
 
     <!-- minotaur -->
@@ -80,6 +92,7 @@
             </canvas>
         </div>
     </div>
+    
     <script src="js/animationFrames.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/Room.js"></script>

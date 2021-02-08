@@ -22,78 +22,101 @@ class Labyrinth {
 
             if (this.currentRoom.id == "A1") {
                 if (e.key == "d") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('b1');
                 } else if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('a2');
                 }
             } else if (this.currentRoom.id == "A2") {
                 if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('a3');
                 } else if (e.key == "d") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('b2');
                 }
             } else if (this.currentRoom.id == "A3") {
                 if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('a4');
                 }
             } else if (this.currentRoom.id == "A4") {
                 if (e.key == "d") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('b4');
                 }
             } else if (this.currentRoom.id == "B4") {
                 if (e.key == "d") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('b3');
                 } else if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('c4');
                 }
             } else if (this.currentRoom.id == "C4") {
                 if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('d4');
                 }
             } else if (this.currentRoom.id == "D4") {
                 if (e.key == "a") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('d5');
                 } else if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('e4');
                 }
             } else if (this.currentRoom.id == "D5") {
                 if (e.key == "a") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('c5');
                 } else if (e.key == "d") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('e5');
                 }
             } else if (this.currentRoom.id == "B5") {
                 if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('a5');
                 }
             } else if (this.currentRoom.id == "B2") {
                 if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('c2');
                 }
             } else if (this.currentRoom.id == "C2") {
                 if (e.key == "a") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('c3');
                 } else if (e.key == "d") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('c1');
                 } else if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('d2');
                 }
             } else if (this.currentRoom.id == "D2") {
                 if (e.key == "a") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('d3');
                 } else if (e.key == "w") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('e2');
                 }
             } else if (this.currentRoom.id == "D3") {
                 if (e.key == "d") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('e3');
                 }
             } else if (this.currentRoom.id == "E2") {
                 if (e.key == "d") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('e1');
                 }
             } else if (this.currentRoom.id == "E1") {
                 if (e.key == "d") {
+                    clearInterval(this.currentRoom.arrowsInterval);
                     this.currentRoom = new Room('d1');
                 }
             }

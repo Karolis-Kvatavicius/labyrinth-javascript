@@ -3,7 +3,7 @@ function getFrames() {
     animationFrames.forEach(enemy => {
         let name = Object.keys(enemy)[0];
         enemy[name].forEach(frame => {
-            document.querySelector('body').innerHTML += "<img class='height " + name + "' src='" + "images/" + name + '/' + frame + "'>";
+            document.querySelector('#'+name).innerHTML += "<img class='height " + name + "' src='" + "images/" + name + '/' + frame + "'>";
         });
     });
 }
